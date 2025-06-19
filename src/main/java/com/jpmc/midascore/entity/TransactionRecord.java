@@ -18,6 +18,8 @@ public class TransactionRecord {
     @JoinColumn(name = "recipient_id", nullable = false)
     private UserRecord recipient;
 
+    private float incentive;
+
     private float amount;
 
     private LocalDateTime timestamp;
@@ -55,6 +57,14 @@ public class TransactionRecord {
 
     public void setRecipient(UserRecord recipient) {
         this.recipient = recipient;
+    }
+
+    public float getIncentive(){
+        return incentive;
+    }
+
+    public void setIncentive(float incentive){
+        this.incentive = incentive;
     }
 
     public float getAmount() {
